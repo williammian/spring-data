@@ -12,5 +12,6 @@ public interface FuncionarioRepository extends CrudRepository<Funcionario, Integ
 	
 	//derived query
 	List<Funcionario> findByNome(String nome);
+	List<Funcionario> findByNomeLike(String nome);
 	
 }

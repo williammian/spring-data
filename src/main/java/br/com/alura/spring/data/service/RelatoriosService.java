@@ -45,7 +45,7 @@ public class RelatoriosService {
 	private void buscaFuncionarioNome(Scanner scanner) {
 		System.out.println("Qual nome deseja pesquisar");
 		String nome = scanner.next();
-		List<Funcionario> list = funcionarioRepository.findByNome(nome);
+		List<Funcionario> list = funcionarioRepository.findByNomeLike(nome);
 		list.forEach(System.out::println);
 	}
 
