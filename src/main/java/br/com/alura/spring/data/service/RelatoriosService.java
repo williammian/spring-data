@@ -8,7 +8,7 @@ import java.util.Scanner;
 import org.springframework.stereotype.Service;
 
 import br.com.alura.spring.data.orm.Funcionario;
-import br.com.alura.spring.data.orm.FuncionarioProjecao;
+import br.com.alura.spring.data.orm.FuncionarioDto;
 import br.com.alura.spring.data.repository.FuncionarioRepository;
 
 @Service
@@ -89,7 +89,7 @@ public class RelatoriosService {
 	}
 	
 	private void pesquisafuncionarioSalario() {
-		List<FuncionarioProjecao> list = funcionarioRepository.findFuncionarioSalario();
+		List<FuncionarioDto> list = funcionarioRepository.findFuncionarioSalarioComProjecaoClasse();
 		list.forEach(f -> System.out.println("Funcionario: id: " + f.getId() 
 		+ " | nome: " + f.getNome() + " | salario: " + f.getSalario()));
 	}
